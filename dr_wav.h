@@ -6025,7 +6025,7 @@ DRWAV_API drwav_uint64 drwav_write_pcm_frames_le(drwav* pWav, drwav_uint64 frame
         pRunningData += bytesJustWritten;
     }
 
-    return (bytesWritten * 8) / pWav->bitsPerSample / pWav->channels;
+    return ((bytesWritten * 8) / pWav->bitsPerSample) / pWav->channels;
 }
 
 DRWAV_API drwav_uint64 drwav_write_pcm_frames_be(drwav* pWav, drwav_uint64 framesToWrite, const void* pData)
